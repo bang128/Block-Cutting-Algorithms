@@ -1,12 +1,10 @@
-import time
-
 def brute_force(block_weight, weight_cost):
     if block_weight <= 0:
         return 0, []
 
     max_profit = 0
     pieces_list = []
-
+    
     for i in range(block_weight):
         cost = 0
         if i+1 in weight_cost.keys():
@@ -54,6 +52,9 @@ def greedy(block_weight, weight_cost):
         block_weight -= weight
         pieces_list.append(weight)
 
+    if block_weight < min(weight_cost.keys()) and block_weight > 0:
+        pieces_list.append(block_weight)
+
     return max_profit, pieces_list
 
 def max_weight_cost(block_weight, weight_cost):
@@ -66,40 +67,3 @@ def max_weight_cost(block_weight, weight_cost):
 
     return max_weight, max_cost
 
-
-def main():
-   # Test case 1:
-   weight_cost = {
-       1: 2,
-       3: 8,
-       5: 10,
-       10: 2
-   }
-   block_weight = 10
-
-
-   print("Brute_Force")
-   start = time.time()
-   print("Result:", brute_force(10, weight_cost))
-   end = time.time()
-   print("Elapsed time:", end - start)
-
-   print("Dynamic")
-   start = time.time()
-   print("Result:", dynamic(10, weight_cost))
-   end = time.time()
-   print("Elapsed time:", end - start)
-
-   print("Greedy")
-   start = time.time()
-   print("Result:", greedy(10, weight_cost))
-   end = time.time()
-   print("Elapsed time:", end - start)
-
-   # Test case 2:
-   # Test case 3:
-
-
-
-if __name__ == '__main__':
-    main()
