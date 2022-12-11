@@ -6,6 +6,7 @@ def test(input_file):
     data = input.readlines()
     block_weight = int(data[0])
     weight_cost = {}
+    print("Size =", block_weight)
 
     for i in range(1, len(data)):
         d = data[i].split()
@@ -37,12 +38,6 @@ def main():
 
 
    print("\nTest case 2:")
-   """There are 2 optimal solutions:
-      1. result = 78, [2, 3, 3, 3, 3, 3, 3] 
-      2. result = 78, [3, 17]
-   The actual results of 3 algorithms are all 78, [3, 17]
-   -> Prioritize the shorter way
-   """
    test("test2.txt")
 
    print("\nTest case 3:")
@@ -64,6 +59,12 @@ def main():
    """
 
    print("\nTest case 5:")
+   """There are 2 optimal solutions:
+         1. result = 78, [2, 3, 3, 3, 3, 3, 3] 
+         2. result = 78, [3, 17]
+      The actual results of 3 algorithms are all 78, [3, 17]
+      -> Prioritize the shorter way
+   """
    test("test5.txt")
 
 
