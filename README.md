@@ -1,6 +1,7 @@
 # COMP257-Final-Project
 
 ## Description
+   The problem is to decide how to cut a block of gold into smaller pieces in order to maximize the profit when selling the gold, knowing that pieces with different weights cost differently. For this problem, I am provided with the weights of some pieces and their corresponding costs. If the weight of a certain piece is not given, I will not get any money for selling that piece. To solve this problem, I will develop three algorithms which are brute force, greedy and dynamic programming in Python. These algorithms take 2 inputs and return 2 outputs.
 
 ## Python files
 - algorithms.py includes 3 functions for the 3 algorithms: Brute Force, Greedy and Dynamic Programming. These 3 functions take 2 arguments:
