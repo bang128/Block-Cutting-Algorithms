@@ -35,13 +35,16 @@ def test(input_file):
 def main():
    print("Test case 1:")
    test("test1.txt")
-
+   """This is just a normal test case with missing weights"""
 
    print("\nTest case 2:")
    test("test2.txt")
+   """No missing weight. Every piece of weights ranging from 1 to block_weight has a specific cost."""
+
 
    print("\nTest case 3:")
    test("test3.txt")
+   """The weights are not in order in this test cases (with missing weights)"""
 
    print("\nTest case 4:")
    test("test4.txt")
